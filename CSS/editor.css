@@ -1,0 +1,123 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* EDITOR TOPBAR */
+.editor-topbar {
+  background: #1a1a1a;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  color: #fff;
+}
+
+/* LEFT: Logo + Project Name */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.editor-logo {
+  height: 40px;
+}
+
+.project-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* RIGHT: Export + Profile + Get Pro */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-btn {
+  border: none;
+  padding: 6px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+/* EXPORT BUTTON */
+.export-btn {
+  background: #0b84ff;
+  color: #fff;
+}
+.export-btn:hover {
+  background: #0a6dcc;
+}
+
+/* GET PRO BUTTON */
+.get-pro-btn {
+  background: #ff1f5a;
+  color: #fff;
+}
+.get-pro-btn:hover {
+  background: #eb285c;
+}
+
+/* USER PROFILE IMAGE */
+.user-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .topbar-right {
+    gap: 8px;
+  }
+  .project-name {
+    font-size: 16px;
+  }
+  .editor-logo {
+    height: 35px;
+  }
+  .user-profile {
+    width: 35px;
+    height: 35px;
+  }
+  .editor-btn {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-name {
+    display: none; /* hide project name on very small screens */
+  }
+  .editor-logo {
+    height: 30px;
+  }
+  .user-profile {
+    width: 30px;
+    height: 30px;
+  }
+  .editor-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+}
